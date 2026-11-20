@@ -1,0 +1,18 @@
+[package]
+name = "sers-controlplane"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+sers-core.workspace = true
+sers-crypto.workspace = true
+sers-protocol.workspace = true
+sers-package.workspace = true
+zeroize.workspace = true
+
+[dev-dependencies]
+sers-identity.workspace = true
