@@ -1,0 +1,17 @@
+[package]
+name = "sers-identity"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+sers-core.workspace = true
+sers-crypto.workspace = true
+sers-protocol.workspace = true
+zeroize.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

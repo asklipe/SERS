@@ -1,0 +1,54 @@
+[package]
+name = "sers-fuzz"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+serde_json = "1"
+sers-core = { path = "../crates/sers-core" }
+sers-crypto = { path = "../crates/sers-crypto" }
+sers-package = { path = "../crates/sers-package" }
+sers-protocol = { path = "../crates/sers-protocol" }
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "package_parse"
+path = "fuzz_targets/package_parse.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "package_mutate"
+path = "fuzz_targets/package_mutate.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "manifest_validate"
+path = "fuzz_targets/manifest_validate.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "protocol_decode"
+path = "fuzz_targets/protocol_decode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "hex_types"
+path = "fuzz_targets/hex_types.rs"
+test = false
+doc = false
+bench = false
